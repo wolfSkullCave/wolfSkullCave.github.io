@@ -1,0 +1,370 @@
+const PROJECTS = [
+  // ── LIVE SITES ─────────────────────────────────────────────────────────────
+  {
+    id: "1VOn3ZKAwUbLEKaM4uTJyztJ9x8DO9kuT",
+    name: "RD Water",
+    url: "rdwater.co.za",
+    cat: "services",
+  },
+  {
+    id: "1xuIS_zCRkSn0fhZF6Ad-k_DvDBIlaHQO",
+    name: "Property PPL",
+    url: "propertyppl.co.za",
+    cat: "property",
+  },
+  {
+    id: "1AdY3MvihswEKkSLO9ONEdrPy8ykD-rSt",
+    name: "Bakara Engineering",
+    url: "bakara.co.za",
+    cat: "corporate",
+  },
+
+  // ── SERVICES ────────────────────────────────────────────────────────────────
+  {
+    id: "1OZeitE3I3MEvcCmDrr14hKFffZswoZzj",
+    name: "Henry Appliance Repairs",
+    url: "henryappliancerepairs.co.za",
+    cat: "services",
+  },
+  {
+    id: "1ao2gnwcumHWJuwLQurOdCk4n6X17knT5",
+    name: "The Cleaning Crew",
+    url: "cleaningcrew.co.za",
+    cat: "services",
+  },
+  {
+    id: "1-XbLEE9x52l-U4YPDpGG1Ltl_JV69nsO",
+    name: "Docvee Cleaning",
+    url: "docvee.co.za",
+    cat: "services",
+  },
+  {
+    id: "17dZBe9qcqf1zkoKFgwig2fU0ifJXUtPw",
+    name: "Orange Clean",
+    url: "orangeclean.co.za",
+    cat: "services",
+  },
+  {
+    id: "1oFAxQyvmVrfmtj0T7iDNGGWK8JG4TdI8",
+    name: "Glomore Construction",
+    url: "glomoreconstruction.co.za",
+    cat: "services",
+  },
+  {
+    id: "1_yMRY7HYg5rNJz_zPk6j6thSe9CJH3C1",
+    name: "Special Ops Contractors",
+    url: "specialops.co.za",
+    cat: "services",
+  },
+  {
+    id: "1XLmnslQxLV0-A5N7F5BeiASNNL_PTV9k",
+    name: "Scatter Response Security",
+    url: "scatter.co.za",
+    cat: "services",
+  },
+  {
+    id: "1ZPDRsFscFp4ztmzE1AEtw1baC3YrvpFQ",
+    name: "Resistant Electrical",
+    url: "resistant-electrical.co.za",
+    cat: "services",
+  },
+  {
+    id: "19HLzJamrmNAw_ViIx2vaQvEqMYDIzRyc",
+    name: "Blinds Perfect",
+    url: "blindsperfect.co.za",
+    cat: "services",
+  },
+  {
+    id: "1XZkaNRYfQNSDB_0Z4xUr1okp6CbQjUZU",
+    name: "Missing Link Facilities",
+    url: "missinglinkfacilities.co.za",
+    cat: "services",
+  },
+  {
+    id: "1rWTlvmh6eceCX_j27UhWy4ehguwxPcc_",
+    name: "RRF Pest Control",
+    url: "rrf-pest-control.co.za",
+    cat: "services",
+  },
+  {
+    id: "1-5Y-0n3PZafvwCwqHvlI_Y8YnskIpDDf",
+    name: "NMK Landscaping",
+    url: "nmklandscaping.co.za",
+    cat: "services",
+  },
+  {
+    id: "1yqmUr0cnCtfFo3-zH4x-Gop8-C54eU8z",
+    name: "My Dog Buddy",
+    url: "mydogbuddy.co.za",
+    cat: "services",
+  },
+  {
+    id: "17ULK2d_QY-LldDrziYvft5a-ivfLLGws",
+    name: "ATMS Fuels",
+    url: "atmsfuels.co.za",
+    cat: "services",
+  },
+
+  // ── CORPORATE ───────────────────────────────────────────────────────────────
+  {
+    id: "1TvnXIgWq-tRLYcjlD7ZajYobvWK-GU08",
+    name: "Sealand Logistics",
+    url: "sealandlogisticlda.co.za",
+    cat: "corporate",
+  },
+  {
+    id: "1lAWmeF_8JWfru_qbq_qFSfo8xiZH9RE0",
+    name: "XF Trading",
+    url: "xf-trading.co.za",
+    cat: "corporate",
+  },
+  {
+    id: "18IDjkCeOulho27qgL-StfcYa3zH63om7",
+    name: "Sadac Commodity Trading",
+    url: "sadac.co.za",
+    cat: "corporate",
+  },
+  {
+    id: "1odSyRiZVa5Z-pB02ytN6AF83hdISm1Op",
+    name: "Trident Specialised Products",
+    url: "trident.co.za",
+    cat: "corporate",
+  },
+  {
+    id: "1GVniCfnHL-22ex8vA7lK1VIX5LeBZqFA",
+    name: "Mineral Leaf",
+    url: "mineralleaf.co.za",
+    cat: "corporate",
+  },
+  {
+    id: "1kBkdRtWWJVW2s0LEa4Psklf8fvdI8gFb",
+    name: "Sapdnafrica",
+    url: "sapdnafrica.co.za",
+    cat: "corporate",
+  },
+  {
+    id: "1gVYHnxsCOrwsFjn1sh2DRPZXwU0L5yLD",
+    name: "Orizur",
+    url: "orizur.co.za",
+    cat: "corporate",
+  },
+  {
+    id: "1tubptz2Ny1qfvS0vvY-3W0w2qAXRg6i4",
+    name: "ABROTECH Abrasives",
+    url: "abrotech.co.za",
+    cat: "corporate",
+  },
+  {
+    id: "1iZ36zqbTvmycRpXrCdN8tRi79K_C4ASt",
+    name: "Origins Consulting",
+    url: "originsconsulting.co.za",
+    cat: "corporate",
+  },
+  {
+    id: "17BC4peONLqBhBqfubauDkX-fMja4X01P",
+    name: "OYO Loans",
+    url: "oyoloans.co.za",
+    cat: "corporate",
+  },
+  {
+    id: "1gUWUZ7Tt9lh3krVtkOpVNj0A1OOA7Jlu",
+    name: "TKN Labs",
+    url: "tkn-labs.co.za",
+    cat: "corporate",
+  },
+  {
+    id: "1rN4cAQw4dX41zwobVpWwn-AZvj1NJurs",
+    name: "314 Company",
+    url: "314company.co.za",
+    cat: "corporate",
+  },
+  {
+    id: "1lldvoDo48uWdEglRrT1eZ5YebA1IIZvL",
+    name: "SP Supplies",
+    url: "sp-suppliers.co.za",
+    cat: "corporate",
+  },
+  {
+    id: "1WxwepwDT5En0LaowRmpZQsexEVC91fL-",
+    name: "BKB Boards & Hardware",
+    url: "bkb-boards.co.za",
+    cat: "corporate",
+  },
+  {
+    id: "16YYRN2rDC2ATigddgYrpSLPmro54rt0V",
+    name: "Exilite 517",
+    url: "exilite.co.za",
+    cat: "corporate",
+  },
+  {
+    id: "1pWQ0zmrrTksSBa-RFle3xpVck5IJ8iNv",
+    name: "Sunshine Tours",
+    url: "sunshinetours.org.za",
+    cat: "corporate",
+  },
+  {
+    id: "1Uxtuni425Sv7TEv5Fj5qG58pk_YyhZXg",
+    name: "Fresh Print",
+    url: "freshprint.co.za",
+    cat: "corporate",
+  },
+
+  // ── PROPERTY ────────────────────────────────────────────────────────────────
+  {
+    id: "1Naz5C7mDGmfS2EZe-IqEMRAloQgKNH1P",
+    name: "Spore Game Farm",
+    url: "sporegamefarm.co.za",
+    cat: "property",
+  },
+  {
+    id: "1KYiaU04hvrXJO-gpbqBOhm8UjfVXv_oE",
+    name: "34 North East",
+    url: "34northeast.co.za",
+    cat: "property",
+  },
+  {
+    id: "1RA0YErpzneS2u5HMsngsa3TGkRCTjT4y",
+    name: "Snowy Owl Homes",
+    url: "snowyowl.co.za",
+    cat: "property",
+  },
+
+  // ── COMMUNITY / NON-PROFIT ──────────────────────────────────────────────────
+  {
+    id: "1aRxssV2OieRjnNUTjFgDaeRuF-aEYSIX",
+    name: "Life Transformation Partner",
+    url: "lifetransformationpartner.com",
+    cat: "community",
+  },
+  {
+    id: "1GcnPHRovpuREDNdB4B-GFjitgc6EOx17",
+    name: "Divine Angels",
+    url: "divineangels.co.za",
+    cat: "community",
+  },
+  {
+    id: "1gYFSiIoWmRiuz5Cr-IA4-cCpQe5FWrRD",
+    name: "Glen Lilly Training College",
+    url: "glenlillytrainingcollege.co.za",
+    cat: "community",
+  },
+  {
+    id: "1mhT2OmBGmZmuCyJTBJvbEWFS6N6cTCdR",
+    name: "Noko Ya Dinoko",
+    url: "nokoyadinoko.co.za",
+    cat: "community",
+  },
+  {
+    id: "1CmbC0MAj5MkDcoOUB3C_aBBkT_3mhRQR",
+    name: "Qholaqhwe Advice Centre",
+    url: "qholaqhwe.co.za",
+    cat: "community",
+  },
+  {
+    id: "1iEJ2z38W00-uIITbFHQ5jycJvpBJtM1F",
+    name: "Oakdale Neighbourhood Watch",
+    url: "oakdale.co.za",
+    cat: "community",
+  },
+  {
+    id: "1aU_ttb_CZrlB03IZ3LLPPLmoiTGLl1Zg",
+    name: "Flispsa",
+    url: "flispsa.co.za",
+    cat: "community",
+  },
+  {
+    id: "1d28nck1gPjOTU8BM2vjTlMMjSuy-z2zA",
+    name: "Hostage Survival",
+    url: "hostagesurvival.co.za",
+    cat: "community",
+  },
+];
+
+const CAT_LABELS = {
+  services: "Services",
+  corporate: "Corporate",
+  property: "Property",
+  community: "Community",
+};
+
+function thumb(id) {
+  return `https://drive.google.com/thumbnail?id=${id}&sz=w600`;
+}
+function full(id) {
+  return `https://drive.google.com/thumbnail?id=${id}&sz=w1200`;
+}
+
+let active = "all";
+
+function buildGrid(cat) {
+  const grid = document.getElementById("grid");
+  const noR = document.getElementById("noResults");
+  const filtered =
+    cat === "all" ? PROJECTS : PROJECTS.filter((p) => p.cat === cat);
+  grid.innerHTML = "";
+  if (!filtered.length) {
+    noR.classList.add("show");
+    return;
+  }
+  noR.classList.remove("show");
+  filtered.forEach((p, i) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img class="card-thumb" src="${thumb(p.id)}" alt="${p.name}" loading="lazy"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="card-thumb-placeholder" style="display:none">🌐</div>
+      <div class="card-body">
+        <div class="card-title">${p.name}</div>
+        <div class="card-url">${p.url}</div>
+        <span class="cat-badge cat-${p.cat}">${CAT_LABELS[p.cat]}</span>
+      </div>`;
+    card.addEventListener("click", () => openModal(p));
+    grid.appendChild(card);
+  });
+}
+
+function updateCounts() {
+  const cats = ["all", "corporate", "services", "property", "community"];
+  cats.forEach((c) => {
+    const n =
+      c === "all"
+        ? PROJECTS.length
+        : PROJECTS.filter((p) => p.cat === c).length;
+    document.getElementById("cnt-" + c).textContent = n;
+  });
+}
+
+function openModal(p) {
+  document.getElementById("modalImg").src = full(p.id);
+  document.getElementById("modalTitle").textContent = p.name;
+  document.getElementById("modalUrl").innerHTML =
+    `<a href="https://${p.url}" target="_blank" rel="noopener">🔗 ${p.url}</a>
+     &nbsp;<span class="cat-badge cat-${p.cat}" style="vertical-align:middle">${CAT_LABELS[p.cat]}</span>
+     &nbsp;&nbsp;<a href="${full(p.id)}" target="_blank" rel="noopener" style="font-size:0.82rem;color:var(--muted);text-decoration:none;border:1px solid var(--border);border-radius:4px;padding:2px 9px;">↗ Open image</a>`;
+  document.getElementById("modal").classList.add("open");
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById("modal")) {
+    document.getElementById("modal").classList.remove("open");
+  }
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape")
+    document.getElementById("modal").classList.remove("open");
+});
+
+document.querySelectorAll(".filter-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document
+      .querySelectorAll(".filter-btn")
+      .forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    buildGrid(btn.dataset.cat);
+  });
+});
+
+updateCounts();
+buildGrid("all");
