@@ -24,6 +24,7 @@
      background: var(--light);
      color: var(--text);
      line-height: 1.5;
+     margin: 0;
  }
 
  /* ─── HEADER ─────────────────────────── */
